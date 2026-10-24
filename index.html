@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>code℃ カタログギフトBOX 診断とくらべて選ぶ</title>
+<meta name="description" content="カタログギフトにスイーツやお花をセットしたcode℃のカタログギフトBOX。3問の診断と、箱の大きさ・予算・中身の比較で、ちょうどいいBOXが見つかります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211d16;
+    --ink-soft:rgba(33,29,22,.72);
+    --paper:#FBF7EE;
+    --paper-deep:#F3ECD9;
+    --gold:#ECC501;
+    --gold-deep:#C7A400;
+    --red:#B60F00;
+    --rose:#C43B4E;
+    --line:rgba(33,29,22,0.14);
+    --white:#FFFFFF;
+    --c-a:#C9A26B;
+    --c-b:#D98A6C;
+    --c-c:#8C6A4A;
+    --c-d:#5B4433;
+    --c-e:#C43B4E;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Sans JP","Jost",sans-serif;
+    letter-spacing:.06em;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;color:inherit;}
+  .en{font-family:"Jost",sans-serif;letter-spacing:.02em;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .kicker{
+    font-family:"Jost",sans-serif;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+  }
+  .section-head{margin:0 0 48px;}
+  .section-head h2{
+    font-size:clamp(28px,4.2vw,44px);
+    font-weight:900;
+    margin:14px 0 18px;
+    letter-spacing:.08em;
+    line-height:1.5;
+  }
+  .section-head p{
+    font-size:15px;
+    max-width:660px;
+    color:var(--ink-soft);
+    letter-spacing:.07em;
+    margin:0;
+  }
+  section{padding:96px 0;}
+  .divider{height:1px;background:var(--line);max-width:1180px;margin:0 auto;}
+
+  /* ---------- header ---------- */
+  header.site{padding:22px 0;border-bottom:1px solid var(--line);background:var(--paper);}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  header.site img{height:34px;width:auto;}
+  header.site .tag{font-size:11px;letter-spacing:.18em;color:rgba(33,29,22,.6);}
+  .top-banner img{width:100%;}
+  .top-banner-link{text-align:center;padding:12px 16px;font-size:13px;border-bottom:1px solid var(--line);}
+  .top-banner-link a{border-bottom:1px solid currentColor;}
+
+  /* ---------- FV ---------- */
+  .fv{padding:80px 0 72px;}
+  .fv .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;}
+  .fv h1{
+    font-size:clamp(30px,4.2vw,50px);
+    font-weight:900;
+    line-height:1.45;
+    letter-spacing:.08em;
+    margin:18px 0 22px;
+  }
+  .fv h1 em{font-style:normal;color:var(--red);}
+  .fv-note{font-size:15px;color:var(--ink-soft);margin:0 0 32px;}
+  .fv-stats{display:flex;gap:28px;flex-wrap:wrap;margin:0 0 34px;padding:0;list-style:none;}
+  .fv-stats li{border-left:2px solid var(--gold);padding-left:14px;line-height:1.4;}
+  .fv-stats b{display:block;font-family:"Jost",sans-serif;font-size:30px;font-weight:600;letter-spacing:.02em;}
+  .fv-stats span{font-size:12px;color:var(--ink-soft);}
+  .fv-photos{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:1fr 1fr;gap:12px;}
+  .fv-photos img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;}
+  .fv-photos img:first-child{grid-row:1/3;aspect-ratio:auto;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--ink);color:var(--white);
+    padding:17px 34px;font-size:15px;font-weight:700;letter-spacing:.12em;
+    border:none;cursor:pointer;transition:background .2s;
+  }
+  .btn:hover{background:var(--red);}
+  .btn svg{width:16px;height:16px;}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);}
+  .btn.ghost:hover{background:var(--ink);color:var(--white);}
+
+  /* ---------- common ---------- */
+  .common{background:var(--white);}
+  .common-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0 0 40px;}
+  .common-item{border:1px solid var(--line);padding:26px 20px;text-align:center;background:var(--paper);}
+  .common-item svg{width:36px;height:36px;stroke:var(--ink);margin:0 auto 12px;}
+  .common-item b{display:block;font-size:15px;margin-bottom:4px;}
+  .common-item span{font-size:12px;color:var(--ink-soft);line-height:1.7;display:block;}
+  .catalog-row{display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center;border-top:1px solid var(--line);padding-top:40px;}
+  .catalog-row img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+  .catalog-row h3{font-size:22px;margin:8px 0 12px;letter-spacing:.08em;}
+  .catalog-row p{font-size:14px;color:var(--ink-soft);margin:0 0 10px;}
+  .bridge{text-align:center;font-size:clamp(20px,2.6vw,26px);font-weight:900;letter-spacing:.12em;margin:56px 0 0;}
+  .bridge small{display:block;font-size:13px;font-weight:500;color:var(--ink-soft);letter-spacing:.08em;margin-top:6px;}
+
+  /* ---------- diagnosis ---------- */
+  .shindan{background:var(--paper-deep);}
+  .quiz{max-width:860px;margin:0 auto;background:var(--white);padding:48px 48px 44px;border:1px solid var(--line);}
+  .quiz-progress{display:flex;gap:6px;margin:0 0 28px;}
+  .quiz-progress i{flex:1;height:4px;background:var(--line);}
+  .quiz-progress i.on{background:var(--gold);}
+  .q{display:none;}
+  .q.active{display:block;animation:fadeUp .35s ease;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .q-num{font-family:"Jost",sans-serif;font-size:56px;font-weight:300;line-height:1;color:var(--gold-deep);letter-spacing:0;}
+  .q-num small{font-size:14px;font-weight:600;letter-spacing:.24em;margin-right:8px;color:var(--ink);vertical-align:middle;}
+  .q h3{font-size:clamp(19px,2.4vw,24px);margin:14px 0 26px;letter-spacing:.08em;line-height:1.6;}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .choice{
+    display:flex;align-items:center;gap:16px;text-align:left;
+    background:var(--paper);border:1px solid var(--line);
+    padding:18px 18px;cursor:pointer;font-size:15px;font-weight:700;letter-spacing:.06em;line-height:1.5;
+    transition:border-color .2s,background .2s,transform .2s;
+  }
+  .choice:hover{border-color:var(--ink);background:var(--white);transform:translateY(-2px);}
+  .choice svg{flex:0 0 44px;width:44px;height:44px;}
+  .choice small{display:block;font-size:12px;font-weight:400;color:var(--ink-soft);margin-top:2px;}
+  .q-back{margin-top:22px;background:none;border:none;font-size:13px;color:var(--ink-soft);cursor:pointer;padding:4px 0;border-bottom:1px solid currentColor;}
+  .result{display:none;}
+  .result.active{display:block;animation:fadeUp .4s ease;}
+  .result-head{text-align:center;margin:0 0 28px;}
+  .result-head .en{font-size:13px;font-weight:600;letter-spacing:.3em;color:var(--gold-deep);}
+  .result-head h3{font-size:clamp(22px,3vw,30px);margin:8px 0 6px;letter-spacing:.08em;line-height:1.5;}
+  .result-head p{font-size:14px;color:var(--ink-soft);margin:0;}
+  .res-main{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:center;border:2px solid var(--ink);padding:22px;background:var(--paper);}
+  .res-main img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+  .res-main .badge{display:inline-block;background:var(--red);color:var(--white);font-size:12px;font-weight:700;letter-spacing:.14em;padding:4px 12px;}
+  .res-main h4{font-size:20px;margin:12px 0 4px;letter-spacing:.06em;line-height:1.5;}
+  .res-main .course{font-family:"Jost",sans-serif;font-size:13px;color:var(--ink-soft);letter-spacing:.1em;}
+  .res-main .price{font-family:"Jost",sans-serif;font-size:34px;font-weight:600;margin:6px 0 10px;letter-spacing:0;}
+  .res-main .price small{font-size:13px;font-weight:500;margin-left:6px;font-family:"Noto Sans JP",sans-serif;}
+  .res-main ul{margin:0 0 18px;padding:0;list-style:none;font-size:13px;}
+  .res-main li{padding-left:18px;position:relative;margin-bottom:4px;line-height:1.7;}
+  .res-main li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:8px;background:var(--gold);}
+  .res-alt-title{font-size:14px;font-weight:700;margin:30px 0 12px;letter-spacing:.1em;}
+  .res-alts{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .res-alt{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;background:var(--white);transition:border-color .2s;}
+  .res-alt:hover{border-color:var(--ink);}
+  .res-alt img{width:96px;height:96px;object-fit:cover;}
+  .res-alt b{display:block;font-size:14px;line-height:1.5;}
+  .res-alt span{font-size:12px;color:var(--ink-soft);display:block;line-height:1.6;}
+  .res-alt .p{font-family:"Jost",sans-serif;font-size:18px;font-weight:600;color:var(--ink);}
+  .res-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;}
+
+  /* ---------- size & budget ---------- */
+  .scale-box{background:var(--white);border:1px solid var(--line);padding:40px 32px 28px;margin:0 0 28px;}
+  .scale-box h3,.ladder h3{font-size:18px;margin:0 0 6px;letter-spacing:.08em;}
+  .scale-box > p,.ladder > p{font-size:13px;color:var(--ink-soft);margin:0 0 28px;}
+  .size-row{--cm:5px;display:grid;grid-template-columns:repeat(5,1fr);gap:24px 12px;}
+  .size-item{display:flex;flex-direction:column;align-items:center;}
+  .size-stage{width:100%;height:calc(24 * var(--cm));display:flex;align-items:flex-end;justify-content:center;border-bottom:2px solid var(--ink);}
+  .size-rect{
+    width:calc(var(--w) * var(--cm));height:calc(var(--h) * var(--cm));
+    background:var(--col);position:relative;transition:transform .2s,filter .2s;
+  }
+  .size-item:hover .size-rect{transform:translateY(-4px);filter:brightness(1.08);}
+  .size-rect.lid::before{content:"";position:absolute;left:-3px;right:-3px;top:0;height:5px;background:rgba(0,0,0,.18);}
+  .size-label{font-size:12px;line-height:1.6;text-align:center;margin-top:10px;}
+  .size-label b{display:block;font-size:13px;}
+  .size-label .en{color:var(--ink-soft);}
+  .size-note{font-size:11px;color:var(--ink-soft);margin:16px 0 0;}
+  .ladder{background:var(--white);border:1px solid var(--line);padding:40px 32px 32px;}
+  .axis{display:grid;grid-template-columns:150px 1fr;gap:16px;font-family:"Jost",sans-serif;font-size:11px;color:var(--ink-soft);margin-bottom:6px;}
+  .axis-ticks{position:relative;height:16px;}
+  .axis-ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap;}
+  .lad-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;padding:14px 0;border-top:1px solid var(--line);}
+  .lad-name{font-size:14px;font-weight:700;line-height:1.5;display:flex;align-items:center;gap:10px;}
+  .lad-name i{flex:0 0 12px;width:12px;height:12px;background:var(--col);}
+  .lad-track{position:relative;height:30px;}
+  .lad-track::before{content:"";position:absolute;left:0;right:0;top:14px;height:2px;background:var(--line);}
+  .lad-range{position:absolute;top:12px;height:6px;background:var(--col);opacity:.35;}
+  .lad-dot{position:absolute;top:6px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:var(--col);border:3px solid var(--white);box-shadow:0 0 0 1px var(--col);transition:transform .15s;}
+  .lad-dot:hover{transform:scale(1.35);z-index:2;}
+  .lad-chips{grid-column:2;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;border:1px solid var(--line);padding:3px 10px;background:var(--paper);transition:border-color .2s,background .2s;line-height:1.6;}
+  .chip:hover{border-color:var(--ink);background:var(--white);}
+  .chip b{font-family:"Jost",sans-serif;font-size:13px;font-weight:600;letter-spacing:0;}
+
+  /* ---------- detail ---------- */
+  .types{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+  .type{background:var(--white);border:1px solid var(--line);scroll-margin-top:20px;}
+  .type-photos{display:grid;grid-template-columns:2fr 1fr;gap:4px;}
+  .type-photos img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;}
+  .type-photos .sub{display:grid;grid-template-rows:1fr 1fr;gap:4px;}
+  .type-photos .sub img{aspect-ratio:auto;}
+  .type-body{padding:26px 26px 28px;}
+  .type-tag{display:flex;align-items:center;gap:10px;font-family:"Jost",sans-serif;font-size:12px;font-weight:600;letter-spacing:.24em;color:var(--ink-soft);}
+  .type-tag i{width:22px;height:4px;background:var(--col);}
+  .type h3{font-size:22px;margin:8px 0 6px;letter-spacing:.08em;line-height:1.5;}
+  .type .lead{font-size:14px;color:var(--ink-soft);margin:0 0 16px;}
+  .spec{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:13px;margin:0 0 16px;padding:14px 16px;background:var(--paper);}
+  .spec dt{font-weight:700;white-space:nowrap;}
+  .spec dd{margin:0;line-height:1.7;}
+  .fit{margin:0 0 18px;padding:0;list-style:none;font-size:13px;}
+  .fit li{padding-left:22px;position:relative;margin-bottom:4px;line-height:1.7;}
+  .fit li svg{position:absolute;left:0;top:.35em;width:15px;height:15px;stroke:var(--red);}
+  .courses{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .course-link{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid var(--line);padding:10px 12px;font-size:12px;transition:border-color .2s,background .2s;}
+  .course-link:hover{border-color:var(--ink);background:var(--paper);}
+  .course-link b{font-family:"Jost",sans-serif;font-size:16px;font-weight:600;letter-spacing:0;}
+  .course-link span{line-height:1.5;}
+  .course-link .arrow{font-size:11px;}
+  .colors{display:flex;gap:6px;margin:0 0 16px;}
+  .colors figure{margin:0;flex:1;text-align:center;font-size:11px;}
+  .colors img{width:100%;aspect-ratio:1/1;object-fit:cover;margin-bottom:4px;}
+
+  /* ---------- same catalog ---------- */
+  .same{background:var(--white);}
+  .same-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .same-card{border:1px solid var(--line);padding:22px 22px 18px;background:var(--paper);}
+  .same-card .en{font-size:20px;font-weight:600;letter-spacing:.06em;}
+  .same-card p{font-size:12px;color:var(--ink-soft);margin:2px 0 12px;}
+  .same-card a{display:grid;grid-template-columns:12px 1fr auto;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line);font-size:13px;}
+  .same-card a i{width:12px;height:12px;background:var(--col);}
+  .same-card a b{font-family:"Jost",sans-serif;font-size:16px;font-weight:600;letter-spacing:0;}
+  .same-card a:hover span{border-bottom:1px solid currentColor;}
+  .same-card .diff{font-size:12px;color:var(--red);font-weight:700;margin:8px 0 0;}
+
+  /* ---------- table ---------- */
+  .sort-btns{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px;}
+  .sort-btns button{background:var(--white);border:1px solid var(--line);padding:8px 16px;font-size:13px;cursor:pointer;letter-spacing:.06em;}
+  .sort-btns button.on{background:var(--ink);color:var(--white);border-color:var(--ink);}
+  table.hayami{width:100%;border-collapse:collapse;background:var(--white);font-size:13px;}
+  .hayami th{background:var(--ink);color:var(--white);font-weight:700;padding:12px 10px;text-align:left;font-size:12px;letter-spacing:.1em;}
+  .hayami td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:middle;line-height:1.5;}
+  .hayami tr:hover td{background:var(--paper);}
+  .hayami .num{font-family:"Jost",sans-serif;font-size:15px;font-weight:600;text-align:right;white-space:nowrap;letter-spacing:0;}
+  .hayami .tname{display:flex;align-items:center;gap:8px;font-weight:700;}
+  .hayami .tname i{flex:0 0 10px;width:10px;height:10px;background:var(--col);}
+  .hayami .cname{font-family:"Jost",sans-serif;letter-spacing:.04em;}
+  .hayami .cname small{display:block;font-family:"Noto Sans JP",sans-serif;font-size:11px;color:var(--ink-soft);}
+  .hayami a.go{display:inline-block;background:var(--ink);color:var(--white);font-size:11px;padding:6px 10px;white-space:nowrap;letter-spacing:.08em;}
+  .hayami a.go:hover{background:var(--red);}
+  .star{color:var(--gold-deep);font-family:"Jost",sans-serif;font-weight:600;white-space:nowrap;}
+  .table-note{font-size:11px;color:var(--ink-soft);margin:12px 0 0;line-height:1.8;}
+
+  /* ---------- summary ---------- */
+  .summary-list{border-top:2px solid var(--ink);}
+  .summary-list a{display:grid;grid-template-columns:1fr auto 1.2fr auto;gap:20px;align-items:center;padding:20px 8px;border-bottom:1px solid var(--line);transition:background .2s;}
+  .summary-list a:hover{background:var(--white);}
+  .summary-list .who{font-size:15px;font-weight:700;letter-spacing:.06em;line-height:1.6;}
+  .summary-list .to{font-family:"Jost",sans-serif;color:var(--gold-deep);font-size:20px;}
+  .summary-list .ans{font-size:14px;line-height:1.6;}
+  .summary-list .ans b{display:block;font-size:15px;}
+  .summary-list .p{font-family:"Jost",sans-serif;font-size:18px;font-weight:600;white-space:nowrap;letter-spacing:0;}
+
+  /* ---------- faq ---------- */
+  .faq{background:var(--paper-deep);}
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .faq-item{background:var(--white);padding:24px 24px 20px;border:1px solid var(--line);}
+  .faq-item h3{font-size:15px;margin:0 0 8px;letter-spacing:.06em;display:flex;gap:10px;line-height:1.6;}
+  .faq-item h3 .en{color:var(--gold-deep);font-weight:600;}
+  .faq-item p{font-size:13px;color:var(--ink-soft);margin:0;}
+
+  .closing{text-align:center;padding:96px 0 110px;}
+  .closing h2{font-size:clamp(26px,3.6vw,38px);font-weight:900;letter-spacing:.1em;line-height:1.6;margin:14px 0 18px;}
+  .closing p{font-size:14px;color:var(--ink-soft);margin:0 0 30px;}
+  .closing .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;font-size:11px;color:var(--ink-soft);}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1180px){
+    .size-row{--cm:4px;}
+  }
+  @media (max-width:960px){
+    .fv .wrap{grid-template-columns:1fr;gap:36px;}
+    .common-grid{grid-template-columns:1fr 1fr;}
+    .catalog-row{grid-template-columns:1fr;gap:22px;}
+    .catalog-row img{max-width:360px;}
+    .types{grid-template-columns:1fr;}
+    .same-grid{grid-template-columns:1fr 1fr;}
+    .size-row{--cm:4px;grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 16px;}
+    section{padding:64px 0;}
+    .section-head{margin-bottom:32px;}
+    header.site img{height:28px;}
+    header.site .tag{display:none;}
+    .fv{padding:44px 0 52px;}
+    .fv-stats{gap:18px;}
+    .fv-stats b{font-size:24px;}
+    .fv .btn{width:100%;}
+    .common-item{padding:20px 12px;}
+    .quiz{padding:30px 18px 28px;}
+    .q-num{font-size:44px;}
+    .choices{grid-template-columns:1fr;gap:10px;}
+    .choice{padding:14px 14px;}
+    .choice svg{flex-basis:38px;width:38px;height:38px;}
+    .res-main{grid-template-columns:1fr;padding:16px;gap:16px;}
+    .res-alts{grid-template-columns:1fr;}
+    .res-actions .btn{width:100%;}
+    .scale-box,.ladder{padding:26px 14px 20px;}
+    .size-row{--cm:2.5px;grid-template-columns:repeat(3,1fr);gap:22px 8px;}
+    .size-label{font-size:10px;letter-spacing:0;}
+    .size-label b{font-size:11px;}
+    .axis,.lad-row{grid-template-columns:1fr;gap:6px;}
+    .axis > span:first-child{display:none;}
+    .lad-chips{grid-column:1;}
+    .type-body{padding:20px 16px 22px;}
+    .courses{grid-template-columns:1fr;}
+    .same-grid{grid-template-columns:1fr;}
+    .hayami{font-size:12px;}
+    .hayami th,.hayami td{padding:9px 5px;}
+    .hayami .col-pages,.hayami .col-star{display:none;}
+    .hayami .tname{font-size:11px;gap:5px;}
+    .hayami .num{font-size:13px;}
+    .hayami a.go{padding:5px 7px;font-size:10px;}
+    .summary-list a{grid-template-columns:1fr auto;gap:6px 12px;padding:16px 4px;}
+    .summary-list .to{display:none;}
+    .summary-list .who{grid-column:1/3;font-size:13px;color:var(--ink-soft);}
+    .faq-grid{grid-template-columns:1fr;}
+    .closing .btn{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img src="images/shop-logo.jpg" alt="code℃ by SOMMELIER@GIFT">
+    <span class="tag en">CATALOG GIFT BOX SELECTION</span>
+  </div>
+</header>
+
+<div class="top-banner">
+  <img src="images/shop-signboard.jpg" alt="コードシーギフトセレクション">
+</div>
+<div class="top-banner-link">
+  <a href="https://search.rakuten.co.jp/search/mall/%E3%82%AB%E3%82%BF%E3%83%AD%E3%82%B0%E3%82%AE%E3%83%95%E3%83%88BOX/?sf=1&amp;sid=277407" target="_blank" rel="noopener">カタログギフトBOX 商品一覧はこちら ▶</a>
+</div>
+
+<!-- FV -->
+<section class="fv">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Catalog Gift Box</span>
+      <h1>カタログギフトに<br>ひと箱の<br><em>うれしい</em>を添えて</h1>
+      <p class="fv-note">選べる楽しみのカタログギフトに、バウムクーヘンや焼き菓子、プリザーブドフラワーをセットにしたcode℃のカタログギフトBOX。ふたを開けた瞬間からよろこんでもらえる「悩まないギフト」です。箱と予算の組み合わせが22通りあるので、3つの質問でぴったりのBOXを探しましょう。</p>
+      <ul class="fv-stats">
+        <li><b>5</b><span>箱のタイプ</span></li>
+        <li><b>22</b><span>コース</span></li>
+        <li><b>5,000<small style="font-size:.6em">〜</small>40,000</b><span>円（税込・送料無料）</span></li>
+      </ul>
+      <a class="btn" href="#shindan">3問でBOX診断をはじめる
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+    </div>
+    <div class="fv-photos">
+      <img src="images/box-d.jpg" alt="カタログギフトと焼き菓子の三段重 木箱">
+      <img src="images/box-e.jpg" alt="プリザーブドフラワーとカタログギフトのセット">
+      <img src="images/box-b-in.jpg" alt="アニマルドーナツと焼き菓子">
+    </div>
+  </div>
+</section>
+
+<!-- COMMON -->
+<section class="common">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">All Boxes Include</span>
+      <h2>どのBOXにも<br>ちゃんと入っているもの</h2>
+      <p>箱のかたちや添えるものは違っても、カタログギフトの中身とギフトサービスはすべてのBOXで同じです。</p>
+    </div>
+    <div class="common-grid">
+      <div class="common-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10c5-2 11-2 16 2v28c-5-4-11-4-16-2V10z"/><path d="M40 10c-5-2-11-2-16 2v28c5-4 11-4 16-2V10z"/></svg>
+        <b>プレミアムカタログ</b><span>グルメも雑貨も選べる<br>総合カタログギフト</span>
+      </div>
+      <div class="common-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="18" width="32" height="22"/><path d="M6 12h36v6H6zM24 12v28"/><path d="M24 12c-4-6-11-6-11-1s7 1 11 1c4 0 11 4 11-1s-7-5-11 1z"/></svg>
+        <b>のし・包装・カード無料</b><span>内祝・御祝・志など<br>用途に合わせて選べます</span>
+      </div>
+      <div class="common-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h24v20H4zM28 20h9l7 7v7H28z"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/></svg>
+        <b>全コース送料無料</b><span>5,000円のBOXから<br>送料はかかりません</span>
+      </div>
+      <div class="common-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="14" width="34" height="26"/><path d="M7 22h34"/><path d="M19 30h10"/></svg>
+        <b>化粧箱・木箱入り</b><span>code℃ロゴの箔押し箱<br>そのまま手渡せます</span>
+      </div>
+    </div>
+    <div class="catalog-row">
+      <img src="images/catalog-open.jpg" alt="プレミアムカタログギフトを開いたところ">
+      <div>
+        <span class="kicker">Premium Catalog Gift</span>
+        <h3>当店人気No.1のカタログが<br>そのまま入っています</h3>
+        <p>ふたを開けると、まず出てくるのがプレミアムカタログギフト。食器や雑貨、世界のブランド品、グルメ、コスメまで、年代を問わず選べるボリュームです。コースによって掲載数は約600〜2,400点。</p>
+        <p>カタログを取り出して仕切りを外すと、その下にスイーツ（またはお花）が入っています。</p>
+      </div>
+    </div>
+    <p class="bridge">では どのBOXにする？<small>迷ったら、下の3問診断へ</small></p>
+  </div>
+</section>
+
+<!-- DIAGNOSIS -->
+<section class="shindan" id="shindan">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center">
+      <span class="kicker">Box Finder</span>
+      <h2>3つの質問で<br>ちょうどいいBOX診断</h2>
+      <p style="margin:0 auto">贈る相手・予算・添えたいものを選ぶだけ。22コースの中から、いちばん近いBOXと、くらべたい候補を出します。</p>
+    </div>
+
+    <div class="quiz" id="quiz">
+      <div class="quiz-progress" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+
+      <div class="q active" data-q="who">
+        <div class="q-num"><small class="en">QUESTION</small>01</div>
+        <h3>今回のギフトは<br>お返し？ それともお祝い？</h3>
+        <div class="choices">
+          <button class="choice" data-v="return">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#211d16" stroke-width="2" stroke-linejoin="round"><rect x="6" y="12" width="36" height="26" fill="#F3ECD9"/><path d="M6 12l18 15 18-15"/><circle cx="24" cy="30" r="4" fill="#B60F00" stroke="none"/></svg>
+            <span>お返し・内祝い<small>出産・結婚・新築の内祝い、香典返しなど</small></span>
+          </button>
+          <button class="choice" data-v="gift">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#211d16" stroke-width="2" stroke-linejoin="round"><rect x="8" y="20" width="32" height="20" fill="#F3ECD9"/><rect x="6" y="14" width="36" height="7" fill="#ECC501"/><path d="M24 14v26"/><path d="M24 14c-3-6-10-6-10-2s6 2 10 2c4 0 10 2 10-2s-7-4-10 2z"/></svg>
+            <span>お祝い・プレゼント<small>出産祝い・結婚祝い・新築祝い・誕生日など</small></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="q" data-q="budget">
+        <div class="q-num"><small class="en">QUESTION</small>02</div>
+        <h3>ご予算はどのくらい？</h3>
+        <div class="choices">
+          <button class="choice" data-v="b1">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#211d16" stroke-width="2"><ellipse cx="24" cy="36" rx="13" ry="5" fill="#ECC501"/></svg>
+            <span>6,000円くらいまで<small>5,000円台の内祝い・お祝いに</small></span>
+          </button>
+          <button class="choice" data-v="b2">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#211d16" stroke-width="2"><ellipse cx="24" cy="36" rx="13" ry="5" fill="#ECC501"/><ellipse cx="24" cy="29" rx="13" ry="5" fill="#ECC501"/></svg>
+            <span>7,000〜12,000円<small>1万円前後のしっかりしたギフトに</small></span>
+          </button>
+          <button class="choice" data-v="b3">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#211d16" stroke-width="2"><ellipse cx="24" cy="36" rx="13" ry="5" fill="#ECC501"/><ellipse cx="24" cy="29" rx="13" ry="5" fill="#ECC501"/><ellipse cx="24" cy="22" rx="13" ry="5" fill="#ECC501"/></svg>
+            <span>15,000〜20,000円<small>お祝いの半返し・親族へのお返しに</small></span>
+          </button>
+          <button class="choice" data-v="b4">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#211d16" stroke-width="2"><ellipse cx="24" cy="36" rx="13" ry="5" fill="#ECC501"/><ellipse cx="24" cy="29" rx="13" ry="5" fill="#ECC501"/><ellipse cx="24" cy="22" rx="13" ry="5" fill="#ECC501"/><ellipse cx="24" cy="15" rx="13" ry="5" fill="#ECC501"/></svg>
+            <span>25,000円以上<small>高額なお祝いへのお返し・特別な贈りものに</small></span>
+          </button>
+        </div>
+        <button class="q-back" data-back>ひとつ前の質問へ戻る</button>
+      </div>
+
+      <div class="q" data-q="extra">
+        <div class="q-num"><small class="en">QUESTION</small>03</div>
+        <h3>カタログに添えるなら<br>どれがうれしそう？</h3>
+        <div class="choices">
+          <button class="choice" data-v="baum">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#8C6A4A" stroke-width="2"><circle cx="24" cy="24" r="17" fill="#F3D9A4"/><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="7.5"/><circle cx="24" cy="24" r="3.5" fill="#FBF7EE"/></svg>
+            <span>縁起のいいバウムクーヘン<small>年輪を重ねるお菓子。きちんと感も◎</small></span>
+          </button>
+          <button class="choice" data-v="coffee">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#5B4433" stroke-width="2" stroke-linejoin="round"><path d="M9 20h24v8a10 10 0 0 1-10 10h-4A10 10 0 0 1 9 28z" fill="#F3ECD9"/><path d="M33 23h3a4 4 0 0 1 0 8h-3"/><path d="M16 9c-2 3 2 4 0 7M23 9c-2 3 2 4 0 7"/></svg>
+            <span>焼き菓子たっぷり＋コーヒー<small>家族みんなでゆっくり楽しめる量</small></span>
+          </button>
+          <button class="choice" data-v="kawaii">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#5B4433" stroke-width="2"><circle cx="13" cy="14" r="5" fill="#E9B98B"/><circle cx="35" cy="14" r="5" fill="#E9B98B"/><circle cx="24" cy="26" r="14" fill="#E9B98B"/><ellipse cx="24" cy="31" rx="6" ry="4.5" fill="#FBF7EE"/><circle cx="19" cy="23" r="1.6" fill="#5B4433"/><circle cx="29" cy="23" r="1.6" fill="#5B4433"/><circle cx="24" cy="29.5" r="1.5" fill="#5B4433"/></svg>
+            <span>かわいい動物ドーナツ<small>子どもがいるご家庭や出産祝いに</small></span>
+          </button>
+          <button class="choice" data-v="flower">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#C43B4E" stroke-width="2"><circle cx="24" cy="14" r="7" fill="#F2C4CC"/><circle cx="34" cy="22" r="7" fill="#F2C4CC"/><circle cx="30" cy="34" r="7" fill="#F2C4CC"/><circle cx="18" cy="34" r="7" fill="#F2C4CC"/><circle cx="14" cy="22" r="7" fill="#F2C4CC"/><circle cx="24" cy="25" r="5" fill="#ECC501" stroke="none"/></svg>
+            <span>飾って残るお花<small>お手入れ不要のプリザーブドフラワー</small></span>
+          </button>
+        </div>
+        <button class="q-back" data-back>ひとつ前の質問へ戻る</button>
+      </div>
+
+      <div class="result" id="result" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SIZE & BUDGET -->
+<section class="scale" id="scale">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Size &amp; Budget</span>
+      <h2>箱の大きさと予算を<br>ひと目でくらべる</h2>
+      <p>同じ縮尺で、箱を正面から見た大きさを並べました。予算の表は、それぞれのBOXがどの価格帯にあるかを示しています。点や価格をタップすると商品ページへ移動します。</p>
+    </div>
+    <div class="scale-box">
+      <h3>正面から見た箱の大きさ</h3>
+      <p>幅×高さを同じ縮尺で表示しています（奥行きは下の数値をご覧ください）</p>
+      <div class="size-row" id="sizeRow"></div>
+      <p class="size-note">※箱サイズは各商品ページ記載の約寸法（幅×奥行×高さ）です。</p>
+    </div>
+    <div class="ladder">
+      <h3>予算で見るBOXの価格帯</h3>
+      <p>帯がそのBOXの価格の幅、点が各コースの価格です（税込・送料無料）</p>
+      <div class="axis"><span></span><div class="axis-ticks" id="axisTicks"></div></div>
+      <div id="ladderRows"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DETAIL -->
+<section class="detail" id="detail">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">5 Box Types</span>
+      <h2>5つの箱を<br>1つずつ くわしく</h2>
+      <p>中身・箱の大きさ・向いている贈り方を、箱のタイプごとにまとめました。コースを選ぶと商品ページへ移動します。</p>
+    </div>
+    <div class="types" id="types"></div>
+  </div>
+</section>
+
+<!-- SAME CATALOG -->
+<section class="same" id="same">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Same Catalog, Different Box</span>
+      <h2>同じカタログで<br>箱だけ選び直せます</h2>
+      <p>同じコースのカタログが、複数の箱で用意されています。カタログのグレードはそのままで、添えるお菓子やお花を変えたいときはここから。</p>
+    </div>
+    <div class="same-grid" id="sameGrid"></div>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section class="table-sec" id="hayami">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">All 22 Courses</span>
+      <h2>全22コース<br>早見表</h2>
+      <p>価格順・カタログの掲載数順に並べ替えできます。掲載数はカタログの選べる商品数のめやすです。</p>
+    </div>
+    <div class="sort-btns" role="group" aria-label="並び替え">
+      <button class="on" data-sort="type">箱のタイプ順</button>
+      <button data-sort="price">価格の安い順</button>
+      <button data-sort="items">掲載数の多い順</button>
+    </div>
+    <table class="hayami">
+      <thead><tr><th>箱のタイプ</th><th>コース</th><th style="text-align:right">価格</th><th class="col-pages" style="text-align:right">掲載数</th><th class="col-star">レビュー</th><th></th></tr></thead>
+      <tbody id="hayamiBody"></tbody>
+    </table>
+    <p class="table-note">※掲載数・ページ数は各商品ページ記載の約数（グルメ含む）です。カタログ内容の切替時期により変わる場合があります。<br>※レビューは2026年10月24日時点の各商品ページの件数です。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SUMMARY -->
+<section class="summary">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">In Short</span>
+      <h2>迷ったら<br>この組み合わせ</h2>
+    </div>
+    <div class="summary-list" id="summaryList"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Q &amp; A</span>
+      <h2>よくあるご質問</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item"><h3><span class="en">Q.</span>のしは付けられますか？</h3><p>無料でお付けします。商品ページの「ご用途」から、お返し（結婚・出産・新築）の内祝、御祝（結婚・出産・新築）、香典へのお返し（志）などを選べます。包装・メッセージカードも無料です。</p></div>
+      <div class="faq-item"><h3><span class="en">Q.</span>お菓子の日持ちは？</h3><p>スイーツは賞味期限まで20日以上ある商品を発送します（森の庭焼き菓子アソートは30日以上）。アレルゲンは小麦・卵・乳成分です。</p></div>
+      <div class="faq-item"><h3><span class="en">Q.</span>お花の色は選べますか？</h3><p>プリザーブドフラワーのBOXは、ピンク・ブルー・イエローの3色から選べます。お手入れ不要で、高温多湿・直射日光を避ければ長く飾っていただけます。</p></div>
+      <div class="faq-item"><h3><span class="en">Q.</span>カタログの中身は確認できますか？</h3><p>各商品ページから、カタログの掲載商品を見ることができます。カタログ内容の切替時期やメーカーの在庫などにより、内容が変わる場合があります。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <span class="kicker">Catalog Gift Box</span>
+    <h2>選べるカタログに<br>ひと箱のうれしいを</h2>
+    <p>もう一度診断する、またはBOXの一覧からじっくり選べます。</p>
+    <div class="btns">
+      <a class="btn" href="#shindan">もう一度 診断する</a>
+      <a class="btn ghost" href="https://search.rakuten.co.jp/search/mall/%E3%82%AB%E3%82%BF%E3%83%AD%E3%82%B0%E3%82%AE%E3%83%95%E3%83%88BOX/?sf=1&amp;sid=277407" target="_blank" rel="noopener">カタログギフトBOX 一覧へ</a>
+    </div>
+  </div>
+</section>
+
+<footer>コードシーギフトセレクション</footer>
+
+<script>
+const ITEM = 'https://item.rakuten.co.jp/patie/';
+
+const TYPES = {
+  a:{key:'a', name:'バウムクーヘンの化粧箱', short:'化粧箱', en:'BAUMKUCHEN BOX', col:'var(--c-a)',
+     img:'images/box-a.jpg', sub:['images/box-a-in.jpg','images/catalog-open.jpg'],
+     size:[27.1,19.6,9.4], lid:false,
+     lead:'カタログの下に、直径14cmのバウムクーヘンとミニバウムクーヘン。いちばん手に取りやすい価格帯のBOXです。',
+     contents:'バウムクーヘン（直径14cm）×1、キャラメリゼミニバウムクーヘン×4（プレーン・ストロベリー各2）',
+     fit:['5,000円前後の内祝い・お祝いに','縁起物のバウムクーヘンを添えたい','かさばらず、きちんと感のある箱で贈りたい']},
+  b:{key:'b', name:'選べる焼き菓子セット', short:'焼き菓子', en:'SWEETS SELECT', col:'var(--c-b)',
+     img:'images/box-b.jpg', sub:['images/box-b-in.jpg','images/catalog-open.jpg'],
+     size:[28.5,20.5,5.8], lid:false,
+     lead:'クマとウサギのアニマルドーナツが入った焼き菓子セットと、森の庭焼き菓子アソートから選べます。',
+     contents:'「アニマルドーナツ・焼き菓子セット」または「森の庭焼き菓子アソート」から1つ',
+     fit:['出産祝い・出産内祝いに','子どもがいるご家庭へ','お菓子を相手に合わせて選びたい']},
+  c:{key:'c', name:'二段重 木箱', short:'二段重', en:'TWO-TIER WOOD BOX', col:'var(--c-c)',
+     img:'images/box-c.jpg', sub:['images/box-c-in.jpg','images/catalog-open.jpg'],
+     size:[26.7,26.7,16.1], lid:true,
+     lead:'1段目にカタログ、2段目にバウムクーヘンとクッキー。木箱入りで、価格帯がいちばん広いBOXです。',
+     contents:'バウムクーヘン×1、キャラメリゼミニバウムクーヘン×3、クッキー×5（チョコチップ・アーモンド）',
+     fit:['1万円前後〜高額のお返しまで幅広く','木箱で格式のある贈りものにしたい','予算に合わせてコースを細かく選びたい']},
+  d:{key:'d', name:'三段重 木箱', short:'三段重', en:'THREE-TIER WOOD BOX', col:'var(--c-d)',
+     img:'images/box-d.jpg', sub:['images/box-d-in.jpg','images/catalog-open.jpg'],
+     size:[26.7,26.7,23], lid:true,
+     lead:'二段重の中身に、ミニバウム5種・ハニーフィナンシェ・ドリップコーヒーをプラス。いちばん中身が多いBOXです。',
+     contents:'バウムクーヘン×1、ミニバウムクーヘン×3、クッキー×5、ミニバウム×5（5種）、ハニーフィナンシェ×3、ドリップコーヒー8g×5',
+     fit:['ご家族みんなで楽しんでほしい','見た目のボリュームを出したい','コーヒー好きの方へ']},
+  e:{key:'e', name:'プリザーブドフラワー', short:'お花', en:'FLOWER BOX', col:'var(--c-e)',
+     img:'images/box-e.jpg', sub:['images/box-e-in.jpg','images/catalog-open.jpg'],
+     size:[36.5,26.8,6.8], lid:false,
+     lead:'お手入れ不要のプリザーブドフラワーとカタログのセット。食べものが苦手な方や、記念に残したいときに。',
+     contents:'プリザーブドフラワー＆アート（造花）。ピンク・ブルー・イエローの3色から選べます',
+     fit:['結婚祝い・新築祝い・開店祝いに','飾って残る贈りものにしたい','甘いものが苦手な方へ'],
+     colors:[['images/box-e.jpg','ピンク'],['images/box-e-blue.jpg','ブルー'],['images/box-e-yellow.jpg','イエロー']]}
+};
+const TYPE_ORDER = ['a','b','c','d','e'];
+
+// 各商品ページの記載値（2026-10-24確認）
+const P = [
+  {id:'code-sset-001',      t:'a', course:'S-BO',  nick:'ソレイユ',     price:5000,  pages:244, items:1361, rating:4.67, reviews:3},
+  {id:'code-sset-003',      t:'a', course:'S-CO',  nick:'フルール',     price:5500,  pages:452, items:1738, rating:5.00, reviews:10},
+  {id:'code-sset-005',      t:'a', course:'S-DO',  nick:'ヴァン',       price:6000,  pages:388, items:2009, rating:null, reviews:1},
+  {id:'cat-sweets-set-001', t:'b', course:'S-BO',  nick:'',             price:5000,  pages:236, items:724,  rating:5.00, reviews:4},
+  {id:'cat-sweets-set-003', t:'b', course:'S-AEO', nick:'',             price:15000, pages:268, items:1300, rating:null, reviews:0},
+  {id:'cat-sweets-set-004', t:'b', course:'S-COO', nick:'',             price:25000, pages:220, items:887,  rating:null, reviews:0},
+  {id:'code-sw2set-004',    t:'c', course:'S-CE',  nick:'プリュイ',     price:7000,  pages:332, items:1379, rating:null, reviews:1},
+  {id:'code-sw2set-007',    t:'c', course:'S-HO',  nick:'リュンヌ',     price:10500, pages:236, items:1001, rating:null, reviews:0},
+  {id:'code-sw2set-009',    t:'c', course:'S-AEO', nick:'テール',       price:15000, pages:268, items:1300, rating:4.80, reviews:10},
+  {id:'code-sw2set-010',    t:'c', course:'S-BOO', nick:'モンターニュ', price:20000, pages:260, items:1005, rating:null, reviews:1},
+  {id:'code-sw2set-012',    t:'c', course:'S-COO', nick:'ミラージュ',   price:26000, pages:220, items:887,  rating:null, reviews:0},
+  {id:'code-sw2set-013',    t:'c', course:'S-VOO', nick:'ニュアージュ', price:40000, pages:212, items:610,  rating:null, reviews:0},
+  {id:'code-sw3set-005',    t:'d', course:'S-DO',  nick:'ヴァン',       price:10000, pages:388, items:2009, rating:null, reviews:0},
+  {id:'code-sw3set-008',    t:'d', course:'S-AOO', nick:'オセアン',     price:15000, pages:332, items:1382, rating:null, reviews:0},
+  {id:'code-sw3set-009',    t:'d', course:'S-AEO', nick:'テール',       price:18000, pages:268, items:1300, rating:null, reviews:2},
+  {id:'code-sw3set-011',    t:'d', course:'S-BEO', nick:'シエル',       price:25000, pages:228, items:806,  rating:null, reviews:0},
+  {id:'code-sw3set-012',    t:'d', course:'S-COO', nick:'ミラージュ',   price:30000, pages:220, items:887,  rating:null, reviews:2},
+  {id:'code-fset-006',      t:'e', course:'S-EO',  nick:'エトワル',     price:10000, pages:460, items:2434, rating:null, reviews:0},
+  {id:'code-fset-008',      t:'e', course:'S-AOO', nick:'オセアン',     price:15000, pages:332, items:1382, rating:null, reviews:0},
+  {id:'code-fset-009',      t:'e', course:'S-AEO', nick:'テール',       price:20000, pages:268, items:1300, rating:null, reviews:0},
+  {id:'code-fset-010',      t:'e', course:'S-BOO', nick:'モンターニュ', price:25000, pages:260, items:1005, rating:null, reviews:0},
+  {id:'code-fset-011',      t:'e', course:'S-BEO', nick:'シエル',       price:30000, pages:228, items:806,  rating:null, reviews:0}
+];
+
+const yen = n => n.toLocaleString('ja-JP');
+const url = p => ITEM + p.id + '/';
+const courseLabel = p => p.course + 'コース' + (p.nick ? '（' + p.nick + '）' : '');
+const byType = k => P.filter(p => p.t === k).sort((x, y) => x.price - y.price);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>';
+
+/* ---------- size visual ---------- */
+function renderSize(){
+  document.getElementById('sizeRow').innerHTML = TYPE_ORDER.map(k => {
+    const t = TYPES[k];
+    return `<a class="size-item" href="#type-${k}">
+      <div class="size-stage"><div class="size-rect${t.lid ? ' lid' : ''}" style="--w:${t.size[0]};--h:${t.size[2]};--col:${t.col}"></div></div>
+      <div class="size-label"><b>${esc(t.short)}</b><span class="en">${t.size[0]}×${t.size[1]}×${t.size[2]}cm</span></div></a>`;
+  }).join('');
+}
+
+/* ---------- budget ladder ---------- */
+const AXIS_MIN = 0, AXIS_MAX = 42000;
+const pos = v => ((v - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100).toFixed(2) + '%';
+function renderLadder(){
+  document.getElementById('axisTicks').innerHTML =
+    [5000,10000,15000,20000,25000,30000,35000,40000].map(v => `<span style="left:${pos(v)}">${v/10000 >= 1 ? (v/10000) + '万' : (v/1000) + '千'}</span>`).join('');
+  document.getElementById('ladderRows').innerHTML = TYPE_ORDER.map(k => {
+    const t = TYPES[k], items = byType(k);
+    const min = items[0].price, max = items[items.length - 1].price;
+    const dots = items.map(p => `<a class="lad-dot" href="${url(p)}" target="_blank" rel="noopener" style="left:${pos(p.price)}" title="${esc(t.short)} ${p.course} ${yen(p.price)}円" aria-label="${esc(t.short)} ${p.course} ${yen(p.price)}円"></a>`).join('');
+    const chips = items.map(p => `<a class="chip" href="${url(p)}" target="_blank" rel="noopener"><b>${yen(p.price)}</b>円</a>`).join('');
+    return `<div class="lad-row" style="--col:${t.col}">
+      <div class="lad-name"><i></i>${esc(t.name)}</div>
+      <div class="lad-track"><span class="lad-range" style="left:${pos(min)};width:calc(${pos(max)} - ${pos(min)})"></span>${dots}</div>
+      <div class="lad-chips">${chips}</div></div>`;
+  }).join('');
+}
+
+/* ---------- type cards ---------- */
+function renderTypes(){
+  document.getElementById('types').innerHTML = TYPE_ORDER.map((k, i) => {
+    const t = TYPES[k], items = byType(k);
+    const colors = t.colors ? `<div class="colors">${t.colors.map(c => `<figure><img src="${c[0]}" alt="プリザーブドフラワー ${c[1]}" loading="lazy">${c[1]}</figure>`).join('')}</div>` : '';
+    const courses = items.map(p => `<a class="course-link" href="${url(p)}" target="_blank" rel="noopener">
+        <span class="en">${courseLabel(p)}</span><b>${yen(p.price)}<small style="font-size:11px;font-weight:500">円</small></b></a>`).join('');
+    return `<article class="type" id="type-${k}" style="--col:${t.col}">
+      <div class="type-photos"><img src="${t.img}" alt="${esc(t.name)}" loading="lazy">
+        <div class="sub">${t.sub.map(s => `<img src="${s}" alt="" loading="lazy">`).join('')}</div></div>
+      <div class="type-body">
+        <div class="type-tag"><i></i>0${i + 1} — ${t.en}</div>
+        <h3>${esc(t.name)}</h3>
+        <p class="lead">${esc(t.lead)}</p>
+        ${colors}
+        <dl class="spec">
+          <dt>中身</dt><dd>${esc(t.contents)}</dd>
+          <dt>箱サイズ</dt><dd>約${t.size[0]}×${t.size[1]}×${t.size[2]}cm</dd>
+          <dt>価格</dt><dd>${yen(items[0].price)}円〜${yen(items[items.length - 1].price)}円（${items.length}コース）</dd>
+        </dl>
+        <ul class="fit">${t.fit.map(f => `<li>${CHECK}${esc(f)}</li>`).join('')}</ul>
+        <div class="courses">${courses}</div>
+      </div></article>`;
+  }).join('');
+}
+
+/* ---------- same catalog ---------- */
+function renderSame(){
+  const groups = {};
+  P.forEach(p => (groups[p.course] = groups[p.course] || []).push(p));
+  const multi = Object.entries(groups).filter(([, a]) => a.length > 1)
+    .sort((a, b) => Math.min(...a[1].map(p => p.price)) - Math.min(...b[1].map(p => p.price)));
+  document.getElementById('sameGrid').innerHTML = multi.map(([c, arr]) => {
+    arr.sort((x, y) => x.price - y.price);
+    const diff = arr[arr.length - 1].price - arr[0].price;
+    const rows = arr.map(p => `<a href="${url(p)}" target="_blank" rel="noopener" style="--col:${TYPES[p.t].col}"><i></i><span>${esc(TYPES[p.t].name)}</span><b>${yen(p.price)}円</b></a>`).join('');
+    return `<div class="same-card"><span class="en">${c}コース</span><p>このカタログが入った箱は${arr.length}種類</p>${rows}
+      ${diff > 0 ? `<p class="diff">箱の違いで ${yen(diff)}円 の差</p>` : `<p class="diff">どちらも同じ価格</p>`}</div>`;
+  }).join('');
+}
+
+/* ---------- table ---------- */
+let sortKey = 'type';
+function renderTable(){
+  const rows = [...P];
+  if (sortKey === 'price') rows.sort((a, b) => a.price - b.price || TYPE_ORDER.indexOf(a.t) - TYPE_ORDER.indexOf(b.t));
+  else if (sortKey === 'items') rows.sort((a, b) => b.items - a.items || a.price - b.price);
+  else rows.sort((a, b) => TYPE_ORDER.indexOf(a.t) - TYPE_ORDER.indexOf(b.t) || a.price - b.price);
+  document.getElementById('hayamiBody').innerHTML = rows.map(p => {
+    const t = TYPES[p.t];
+    const star = p.reviews ? `<span class="star">★${p.rating ? p.rating.toFixed(2) : ''}</span> <small>${p.reviews}件</small>` : '<small style="color:var(--ink-soft)">—</small>';
+    return `<tr style="--col:${t.col}">
+      <td><span class="tname"><i></i>${esc(t.short)}</span></td>
+      <td class="cname">${p.course}${p.nick ? `<small>${esc(p.nick)}</small>` : ''}</td>
+      <td class="num">${yen(p.price)}円</td>
+      <td class="num col-pages">約${yen(p.items)}点</td>
+      <td class="col-star">${star}</td>
+      <td style="text-align:right"><a class="go" href="${url(p)}" target="_blank" rel="noopener">見る</a></td></tr>`;
+  }).join('');
+}
+document.querySelectorAll('.sort-btns button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.sort-btns button').forEach(x => x.classList.toggle('on', x === b));
+  sortKey = b.dataset.sort;
+  renderTable();
+}));
+
+/* ---------- summary ---------- */
+const SUMMARY = [
+  ['5,000円台の内祝いを、きちんと', 'code-sset-003', 'バウムクーヘンの化粧箱'],
+  ['出産内祝い・出産祝いを、かわいく', 'cat-sweets-set-001', '選べる焼き菓子セット'],
+  ['1万円前後のお返しに、木箱で', 'code-sw2set-007', '二段重 木箱'],
+  ['半返しの定番 15,000円', 'code-sw2set-009', '二段重 木箱'],
+  ['家族みんなで楽しめる量を', 'code-sw3set-008', '三段重 木箱'],
+  ['結婚祝い・新築祝いに、飾れるものを', 'code-fset-006', 'プリザーブドフラワー']
+];
+function renderSummary(){
+  document.getElementById('summaryList').innerHTML = SUMMARY.map(([who, id, label]) => {
+    const p = P.find(x => x.id === id);
+    return `<a href="${url(p)}" target="_blank" rel="noopener"><span class="who">${esc(who)}</span><span class="to">→</span>
+      <span class="ans"><b>${esc(label)}</b>${courseLabel(p)}</span><span class="p">${yen(p.price)}円</span></a>`;
+  }).join('');
+}
+
+/* ---------- diagnosis ---------- */
+const BUDGET = {
+  b1:{min:0,     max:6000,   target:5500,  label:'6,000円くらいまで'},
+  b2:{min:7000,  max:12000,  target:10000, label:'7,000〜12,000円'},
+  b3:{min:15000, max:20000,  target:15000, label:'15,000〜20,000円'},
+  b4:{min:25000, max:99999,  target:26000, label:'25,000円以上'}
+};
+const EXTRA_TYPE = {
+  baum:   b => b === 'b1' ? 'a' : 'c',
+  coffee: () => 'd',
+  kawaii: () => 'b',
+  flower: () => 'e'
+};
+const answers = {};
+const steps = ['who', 'budget', 'extra'];
+let stepIdx = 0;
+
+function showStep(i){
+  stepIdx = i;
+  document.querySelectorAll('#quiz .q').forEach(q => q.classList.toggle('active', q.dataset.q === steps[i]));
+  document.querySelectorAll('.quiz-progress i').forEach((el, n) => el.classList.toggle('on', n <= i));
+  document.getElementById('result').classList.remove('active');
+}
+
+function pickBest(items, b){
+  const inRange = items.filter(p => p.price >= b.min && p.price <= b.max);
+  const pool = inRange.length ? inRange : items;
+  return [...pool].sort((x, y) =>
+    Math.abs(x.price - b.target) - Math.abs(y.price - b.target) || y.reviews - x.reviews)[0];
+}
+
+function pickAlts(main, b){
+  const alts = [];
+  // 1) 同じカタログで別の箱
+  const sameCourse = P.filter(p => p.course === main.course && p.id !== main.id)
+    .sort((x, y) => Math.abs(x.price - main.price) - Math.abs(y.price - main.price));
+  if (sameCourse[0]) alts.push({p: sameCourse[0], why: '同じカタログで、箱違い'});
+  // 2) 同じ箱で予算を少し動かす
+  const sameType = byType(main.t).filter(p => p.id !== main.id && !alts.some(a => a.p.id === p.id))
+    .sort((x, y) => Math.abs(x.price - main.price) - Math.abs(y.price - main.price));
+  if (sameType[0]) alts.push({p: sameType[0], why: sameType[0].price > main.price ? '同じ箱で、ワンランク上' : '同じ箱で、予算をおさえて'});
+  // 3) 予算内で別の箱
+  if (alts.length < 2){
+    const other = P.filter(p => p.t !== main.t && p.price >= b.min && p.price <= b.max && !alts.some(a => a.p.id === p.id))
+      .sort((x, y) => Math.abs(x.price - b.target) - Math.abs(y.price - b.target));
+    if (other[0]) alts.push({p: other[0], why: '同じ予算で、別の箱'});
+  }
+  return alts.slice(0, 2);
+}
+
+function showResult(){
+  const b = BUDGET[answers.budget];
+  const typeKey = EXTRA_TYPE[answers.extra](answers.budget);
+  const t = TYPES[typeKey];
+  const main = pickBest(byType(typeKey), b);
+  const alts = pickAlts(main, b);
+  const outOfRange = main.price < b.min || main.price > b.max;
+  const noshi = answers.who === 'return'
+    ? 'のしは「内祝」（香典返しは「志」）で無料でお付けできます'
+    : 'のしは「御祝」で無料。メッセージカードも添えられます';
+  const reasons = [noshi, t.fit[0]];
+  if (outOfRange) reasons.push(`このBOXは${yen(byType(typeKey)[0].price)}円からのため、いちばん近いコースをご案内しています`);
+  if (main.reviews) reasons.push(`レビュー${main.reviews}件${main.rating ? '・★' + main.rating.toFixed(2) : ''}`);
+
+  const altHtml = alts.map(a => `<a class="res-alt" href="${url(a.p)}" target="_blank" rel="noopener">
+      <img src="${TYPES[a.p.t].img}" alt="${esc(TYPES[a.p.t].name)}" loading="lazy">
+      <div><span>${esc(a.why)}</span><b>${esc(TYPES[a.p.t].name)}</b><span>${courseLabel(a.p)}</span><span class="p">${yen(a.p.price)}円</span></div></a>`).join('');
+
+  const res = document.getElementById('result');
+  res.innerHTML = `
+    <div class="result-head"><span class="en">YOUR BOX</span>
+      <h3>あなたにぴったりなのは<br>「${esc(t.name)}」</h3>
+      <p>${answers.who === 'return' ? 'お返し・内祝い' : 'お祝い・プレゼント'} ／ ${b.label}</p></div>
+    <div class="res-main">
+      <img src="${t.img}" alt="${esc(t.name)}">
+      <div>
+        <span class="badge">いちばんのおすすめ</span>
+        <h4>${esc(t.name)} × カタログギフト</h4>
+        <div class="course">${courseLabel(main)}</div>
+        <div class="price">${yen(main.price)}<small>円（税込・送料無料）</small></div>
+        <ul>${reasons.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
+        <a class="btn" href="${url(main)}" target="_blank" rel="noopener">商品ページを見る</a>
+      </div>
+    </div>
+    ${alts.length ? `<p class="res-alt-title">くらべてみるなら</p><div class="res-alts">${altHtml}</div>` : ''}
+    <div class="res-actions">
+      <button class="btn ghost" id="retry">もう一度診断する</button>
+      <a class="btn ghost" href="#type-${typeKey}">この箱をくわしく見る</a>
+    </div>`;
+  document.querySelectorAll('#quiz .q').forEach(q => q.classList.remove('active'));
+  document.querySelectorAll('.quiz-progress i').forEach(el => el.classList.add('on'));
+  res.classList.add('active');
+  document.getElementById('retry').addEventListener('click', () => showStep(0));
+  const top = document.getElementById('quiz').getBoundingClientRect().top + window.pageYOffset - 16;
+  window.scrollTo({top, behavior:'smooth'});
+}
+
+document.querySelectorAll('#quiz .q').forEach(q => {
+  q.querySelectorAll('.choice').forEach(btn => btn.addEventListener('click', () => {
+    answers[q.dataset.q] = btn.dataset.v;
+    if (stepIdx < steps.length - 1) showStep(stepIdx + 1);
+    else showResult();
+  }));
+  const back = q.querySelector('[data-back]');
+  if (back) back.addEventListener('click', () => showStep(Math.max(0, stepIdx - 1)));
+});
+
+renderSize();
+renderLadder();
+renderTypes();
+renderSame();
+renderTable();
+renderSummary();
+</script>
+</body>
+</html>

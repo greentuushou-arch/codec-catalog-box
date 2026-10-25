@@ -170,23 +170,9 @@
   .res-alt .p{font-family:"Jost",sans-serif;font-size:18px;font-weight:600;color:var(--ink);}
   .res-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;}
 
-  /* ---------- size & budget ---------- */
-  .scale-box{background:var(--white);border:1px solid var(--line);padding:40px 32px 28px;margin:0 0 28px;}
-  .scale-box h3,.ladder h3{font-size:18px;margin:0 0 6px;letter-spacing:.08em;}
-  .scale-box > p,.ladder > p{font-size:13px;color:var(--ink-soft);margin:0 0 28px;}
-  .size-row{--cm:5px;display:grid;grid-template-columns:repeat(5,1fr);gap:24px 12px;}
-  .size-item{display:flex;flex-direction:column;align-items:center;}
-  .size-stage{width:100%;height:calc(24 * var(--cm));display:flex;align-items:flex-end;justify-content:center;border-bottom:2px solid var(--ink);}
-  .size-rect{
-    width:calc(var(--w) * var(--cm));height:calc(var(--h) * var(--cm));
-    background:var(--col);position:relative;transition:transform .2s,filter .2s;
-  }
-  .size-item:hover .size-rect{transform:translateY(-4px);filter:brightness(1.08);}
-  .size-rect.lid::before{content:"";position:absolute;left:-3px;right:-3px;top:0;height:5px;background:rgba(0,0,0,.18);}
-  .size-label{font-size:12px;line-height:1.6;text-align:center;margin-top:10px;}
-  .size-label b{display:block;font-size:13px;}
-  .size-label .en{color:var(--ink-soft);}
-  .size-note{font-size:11px;color:var(--ink-soft);margin:16px 0 0;}
+  /* ---------- budget ---------- */
+  .ladder h3{font-size:18px;margin:0 0 6px;letter-spacing:.08em;}
+  .ladder > p{font-size:13px;color:var(--ink-soft);margin:0 0 28px;}
   .ladder{background:var(--white);border:1px solid var(--line);padding:40px 32px 32px;}
   .axis{display:grid;grid-template-columns:150px 1fr;gap:16px;font-family:"Jost",sans-serif;font-size:11px;color:var(--ink-soft);margin-bottom:6px;}
   .axis-ticks{position:relative;height:16px;}
@@ -287,9 +273,6 @@
   footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;font-size:11px;color:var(--ink-soft);}
 
   /* ---------- responsive ---------- */
-  @media (max-width:1180px){
-    .size-row{--cm:4px;}
-  }
   @media (max-width:960px){
     .fv .wrap{grid-template-columns:1fr;gap:36px;}
     .common-grid{grid-template-columns:1fr 1fr;}
@@ -297,7 +280,6 @@
     .catalog-row img{max-width:360px;}
     .types{grid-template-columns:1fr;}
     .same-grid{grid-template-columns:1fr 1fr;}
-    .size-row{--cm:4px;grid-template-columns:repeat(3,1fr);}
   }
   @media (max-width:640px){
     .wrap{padding:0 16px;}
@@ -318,10 +300,7 @@
     .res-main{grid-template-columns:1fr;padding:16px;gap:16px;}
     .res-alts{grid-template-columns:1fr;}
     .res-actions .btn{width:100%;}
-    .scale-box,.ladder{padding:26px 14px 20px;}
-    .size-row{--cm:2.5px;grid-template-columns:repeat(3,1fr);gap:22px 8px;}
-    .size-label{font-size:10px;letter-spacing:0;}
-    .size-label b{font-size:11px;}
+    .ladder{padding:26px 14px 20px;}
     .axis,.lad-row{grid-template-columns:1fr;gap:6px;}
     .axis > span:first-child{display:none;}
     .lad-chips{grid-column:1;}
@@ -500,19 +479,13 @@
   </div>
 </section>
 
-<!-- SIZE & BUDGET -->
+<!-- BUDGET -->
 <section class="scale" id="scale">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">Size &amp; Budget</span>
-      <h2>箱の大きさと予算を<br>ひと目でくらべる</h2>
-      <p>同じ縮尺で、箱を正面から見た大きさを並べました。予算の表は、それぞれのBOXがどの価格帯にあるかを示しています。点や価格をタップすると商品ページへ移動します。</p>
-    </div>
-    <div class="scale-box">
-      <h3>正面から見た箱の大きさ</h3>
-      <p>幅×高さを同じ縮尺で表示しています（奥行きは下の数値をご覧ください）</p>
-      <div class="size-row" id="sizeRow"></div>
-      <p class="size-note">※箱サイズは各商品ページ記載の約寸法（幅×奥行×高さ）です。</p>
+      <span class="kicker">Budget</span>
+      <h2>予算でBOXを<br>ひと目でくらべる</h2>
+      <p>それぞれのBOXがどの価格帯にあるかをまとめました。点や価格をタップすると商品ページへ移動します。</p>
     </div>
     <div class="ladder">
       <h3>予算で見るBOXの価格帯</h3>
@@ -619,31 +592,31 @@ const ITEM = 'https://item.rakuten.co.jp/patie/';
 const TYPES = {
   a:{key:'a', name:'バウムクーヘンの化粧箱', short:'化粧箱', en:'BAUMKUCHEN BOX', col:'var(--c-a)',
      img:'images/box-a.jpg', sub:['images/box-a-in.jpg','images/catalog-open.jpg'],
-     size:[27.1,19.6,9.4], lid:false,
+     size:[27.1,19.6,9.4],
      lead:'カタログの下に、直径14cmのバウムクーヘンとミニバウムクーヘン。いちばん手に取りやすい価格帯のBOXです。',
      contents:'バウムクーヘン（直径14cm）×1、キャラメリゼミニバウムクーヘン×4（プレーン・ストロベリー各2）',
      fit:['5,000円前後の内祝い・お祝いに','縁起物のバウムクーヘンを添えたい','かさばらず、きちんと感のある箱で贈りたい']},
   b:{key:'b', name:'選べる焼き菓子セット', short:'焼き菓子', en:'SWEETS SELECT', col:'var(--c-b)',
      img:'images/box-b.jpg', sub:['images/box-b-in.jpg','images/catalog-open.jpg'],
-     size:[28.5,20.5,5.8], lid:false,
+     size:[28.5,20.5,5.8],
      lead:'クマとウサギのアニマルドーナツが入った焼き菓子セットと、森の庭焼き菓子アソートから選べます。',
      contents:'「アニマルドーナツ・焼き菓子セット」または「森の庭焼き菓子アソート」から1つ',
      fit:['出産祝い・出産内祝いに','子どもがいるご家庭へ','お菓子を相手に合わせて選びたい']},
   c:{key:'c', name:'二段重 木箱', short:'二段重', en:'TWO-TIER WOOD BOX', col:'var(--c-c)',
      img:'images/box-c.jpg', sub:['images/box-c-in.jpg','images/catalog-open.jpg'],
-     size:[26.7,26.7,16.1], lid:true,
+     size:[26.7,26.7,16.1],
      lead:'1段目にカタログ、2段目にバウムクーヘンとクッキー。木箱入りで、価格帯がいちばん広いBOXです。',
      contents:'バウムクーヘン×1、キャラメリゼミニバウムクーヘン×3、クッキー×5（チョコチップ・アーモンド）',
      fit:['1万円前後〜高額のお返しまで幅広く','木箱で格式のある贈りものにしたい','予算に合わせてコースを細かく選びたい']},
   d:{key:'d', name:'三段重 木箱', short:'三段重', en:'THREE-TIER WOOD BOX', col:'var(--c-d)',
      img:'images/box-d.jpg', sub:['images/box-d-in.jpg','images/catalog-open.jpg'],
-     size:[26.7,26.7,23], lid:true,
+     size:[26.7,26.7,23],
      lead:'二段重の中身に、ミニバウム5種・ハニーフィナンシェ・ドリップコーヒーをプラス。いちばん中身が多いBOXです。',
      contents:'バウムクーヘン×1、ミニバウムクーヘン×3、クッキー×5、ミニバウム×5（5種）、ハニーフィナンシェ×3、ドリップコーヒー8g×5',
      fit:['ご家族みんなで楽しんでほしい','見た目のボリュームを出したい','コーヒー好きの方へ']},
   e:{key:'e', name:'プリザーブドフラワー', short:'お花', en:'FLOWER BOX', col:'var(--c-e)',
      img:'images/box-e.jpg', sub:['images/box-e-in.jpg','images/catalog-open.jpg'],
-     size:[36.5,26.8,6.8], lid:false,
+     size:[36.5,26.8,6.8],
      lead:'お手入れ不要のプリザーブドフラワーとカタログのセット。食べものが苦手な方や、記念に残したいときに。',
      contents:'プリザーブドフラワー＆アート（造花）。ピンク・ブルー・イエローの3色から選べます',
      fit:['結婚祝い・新築祝い・開店祝いに','飾って残る贈りものにしたい','甘いものが苦手な方へ'],
@@ -683,16 +656,6 @@ const courseLabel = p => p.course + 'コース' + (p.nick ? '（' + p.nick + '�
 const byType = k => P.filter(p => p.t === k).sort((x, y) => x.price - y.price);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>';
-
-/* ---------- size visual ---------- */
-function renderSize(){
-  document.getElementById('sizeRow').innerHTML = TYPE_ORDER.map(k => {
-    const t = TYPES[k];
-    return `<a class="size-item" href="#type-${k}">
-      <div class="size-stage"><div class="size-rect${t.lid ? ' lid' : ''}" style="--w:${t.size[0]};--h:${t.size[2]};--col:${t.col}"></div></div>
-      <div class="size-label"><b>${esc(t.short)}</b><span class="en">${t.size[0]}×${t.size[1]}×${t.size[2]}cm</span></div></a>`;
-  }).join('');
-}
 
 /* ---------- budget ladder ---------- */
 const AXIS_MIN = 0, AXIS_MAX = 42000;
@@ -902,7 +865,6 @@ document.querySelectorAll('#quiz .q').forEach(q => {
   if (back) back.addEventListener('click', () => showStep(Math.max(0, stepIdx - 1)));
 });
 
-renderSize();
 renderLadder();
 renderTypes();
 renderSame();
